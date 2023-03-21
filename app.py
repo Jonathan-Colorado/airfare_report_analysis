@@ -75,8 +75,7 @@ flight_year_df = air_travel_df[air_travel_df['year']\
                                         )]
 fig_a = px.scatter(flight_year_df, 
                    x='nonstop_miles', 
-                   y='fare', 
-                   trendline='ols',
+                   y='fare',
                    color='airline_largest', 
                    color_continuous_scale='speed')
 st.plotly_chart(fig_a, use_container_width=True)
