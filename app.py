@@ -64,8 +64,8 @@ st.subheader('Miles vs. Fares')
 air_travel_df['fare_per_mile'] = air_travel_df.fare / air_travel_df.nonstop_miles
 air_travel_df['year'] = air_travel_df['year'].astype('int32')
 range_selection = st.slider('Select the time range for the plot:',
-                            air_travel_df.year.min(),
-                            air_travel_df.year.max(),
+                            1996,
+                            2022,
                             (1999, 2013),
                             step=1)
 flight_year_df = air_travel_df[air_travel_df['year']\
