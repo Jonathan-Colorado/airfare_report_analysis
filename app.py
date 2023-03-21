@@ -88,8 +88,8 @@ air_travel_df['revenue'] = air_travel_df['passengers'] * air_travel_df['fare']
 col1, col2 = st.columns(2)
 with col1:
     revenue_year = st.slider('Select the year:',
-                            air_travel_df.year.min(),
-                            air_travel_df.year.max(),
+                            1996, # hardcoded due to type mismatch
+                            2022, # on render (int32 vs int)
                             2017
                             )
 with col2:
